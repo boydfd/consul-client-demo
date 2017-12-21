@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: eureka-client
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+          tags: demo-client
+          healthCheckUrl: http://localhost:${server.port}/health
+          healthCheckInterval: 30s
+server:
+  port: 2001
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: http://localhost:10001/eureka/
+
