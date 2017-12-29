@@ -1,8 +1,8 @@
-FROM 8_jdk_unlimited
+FROM anapsix/alpine-java:8_jdk_unlimited
 
-env root_path /app
-env application consul_client.jar
-workdir ${root_path}
+ENV root_path /app
+ENV application consul_client.jar
+WORKDIR ${root_path}
 COPY ./$application $root_path
 
 CMD java -r 
